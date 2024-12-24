@@ -12,10 +12,9 @@ struct LoadingView: View {
         ZStack {
             Image(.splashView)
                 .resizable()
-            Image("")
-                .resizable()
-                .background(.black)
-                .opacity(0.2)
+                .overlay(
+                               Color.black.opacity(0.3)
+                           )
             VStack {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
