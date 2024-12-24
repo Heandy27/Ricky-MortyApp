@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @State var viewModel: HomeViewModel
-    @State var filter: String = ""
+    @State var showModel: Bool = false
+    @State var selectedCharacter : Results? = nil
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -21,8 +22,9 @@ struct HomeView: View {
             VStack {
                 List {
                     ForEach(viewModel.filteredCharacters) { characters in
-                        NavigationLink {
-                            DetailViewHome(character: characters)
+                        Button {
+                            selectedCharacter = characters
+                            showModel = true
                         } label: {
                             SingleViewHome(character: characters)
                         }
@@ -30,6 +32,11 @@ struct HomeView: View {
                 }
                 .searchable(text: $viewModel.searchText, prompt: "Search your character")
                 .navigationTitle("Characters")
+            }
+        }
+        .sheet(isPresented: $showModel) {
+            if let character = selectedCharacter {
+                DetailViewHome(character: character)
             }
         }
     }

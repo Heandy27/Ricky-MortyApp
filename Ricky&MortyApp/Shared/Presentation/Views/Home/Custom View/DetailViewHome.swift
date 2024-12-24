@@ -25,6 +25,7 @@ struct DetailViewHome: View {
             Text(character.status)
             Spacer()
         }
+        .ignoresSafeArea()
     }
 }
 

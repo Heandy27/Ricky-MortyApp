@@ -28,8 +28,10 @@ struct SingleViewHome: View {
                     .font(.title3)
                     .lineLimit(1)
                     .bold()
+                    .foregroundStyle(.black)
                 HStack {
                     Text(character.gender)
+                        .foregroundStyle(.black)
                     Text("-")
                     if character.status == "Alive" {
                         Text(character.status)
