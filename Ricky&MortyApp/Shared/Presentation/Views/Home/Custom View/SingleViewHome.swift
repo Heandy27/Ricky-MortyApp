@@ -34,6 +34,9 @@ struct SingleViewHome: View {
                     if character.status == "Alive" {
                         Text(character.status)
                             .foregroundStyle(.green)
+                    } else if character.status == "unknown"{
+                        Text(character.status)
+                            .foregroundStyle(.black)
                     } else {
                         Text(character.status)
                             .foregroundStyle(.red)
