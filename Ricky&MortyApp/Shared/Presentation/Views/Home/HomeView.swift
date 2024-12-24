@@ -10,7 +10,6 @@ import SwiftUI
 struct HomeView: View {
     
     @State var viewModel: HomeViewModel
-    @State var showModel: Bool = false
     @State var selectedCharacter: Results?
     @Environment(AppStateVM.self) var appState
     
@@ -25,7 +24,7 @@ struct HomeView: View {
                     ForEach(viewModel.filteredCharacters) { characters in
                         Button {
                             selectedCharacter = characters
-                            showModel = true
+                            viewModel.showModel = true
                         } label: {
                             SingleViewHome(character: characters)
                         }
@@ -35,7 +34,7 @@ struct HomeView: View {
                 .navigationTitle("Characters")
             }
         }
-        .sheet(isPresented: $showModel) {
+        .sheet(isPresented: $viewModel.showModel) {
             if let character = selectedCharacter {
                 DetailViewHome(character: character)
             }
