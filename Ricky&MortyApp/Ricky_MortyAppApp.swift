@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Ricky_MortyAppApp: App {
+    
+    var appState = AppStateVM()
+    
     var body: some Scene {
         WindowGroup {
-            HomeView(viewModel: HomeViewModel())
+            RootView()
+                .environment(AppStateVM())
         }
     }
 }

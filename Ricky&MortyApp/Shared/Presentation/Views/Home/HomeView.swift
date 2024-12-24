@@ -11,7 +11,8 @@ struct HomeView: View {
     
     @State var viewModel: HomeViewModel
     @State var showModel: Bool = false
-    @State var selectedCharacter : Results? = nil
+    @State var selectedCharacter: Results?
+    @Environment(AppStateVM.self) var appState
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -44,4 +45,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView(viewModel: HomeViewModel())
+        .environment(AppStateVM())
 }
