@@ -20,7 +20,7 @@ struct LoadingView: View {
                     .progressViewStyle(CircularProgressViewStyle())
                     .tint(.white)
                     .padding(.bottom, 5)
-                Text("Cargando...")
+                Text("Loading...")
                     .foregroundStyle(.white)
                     .bold()
             }

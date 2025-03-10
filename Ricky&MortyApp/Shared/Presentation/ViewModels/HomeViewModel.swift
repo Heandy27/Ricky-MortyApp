@@ -5,6 +5,7 @@ final class HomeViewModel {
     var characters: [Results] = []
     var searchText: String = ""
     var showModel: Bool = false
+    var characterselected: Results?
     // No publicadas
     @ObservationIgnored
     let characterUsecase: CharactersUseCaseProtocol

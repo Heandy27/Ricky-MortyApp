@@ -1,10 +1,3 @@
-//
-//  HomeView.swift
-//  Ricky&MortyApp
-//
-//  Created by Andy Heredia on 23/12/24.
-//
-
 import SwiftUI
 
 struct HomeView: View {
@@ -12,30 +5,38 @@ struct HomeView: View {
     @State var viewModel: HomeViewModel
     @State var selectedCharacter: Results?
     @Environment(AppStateVM.self) var appState
-    
+    @AppStorage("showingGrid") private var showingGrid = false    
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
     }
     
     var body: some View {
         NavigationStack {
+            
             VStack {
-                List {
-                    ForEach(viewModel.filteredCharacters) { characters in
-                        Button {
-                            selectedCharacter = characters
-                            viewModel.showModel = true
-                        } label: {
-                            SingleViewHome(character: characters)
-                        }
+                Group {
+                    if showingGrid {
+                        GridLayout(viewModel: viewModel)
+                    } else {
+                        ListLayout(viewModel: viewModel)
                     }
                 }
-                .searchable(text: $viewModel.searchText, prompt: "Search your character")
-                .navigationTitle("Characters")
+                .toolbar {
+                    Button {
+                        showingGrid.toggle()
+                    } label: {
+                        if showingGrid {
+                            Label("Show as table", systemImage: "list.dash")
+                        } else {
+                            Label("Show as grid", systemImage: "square.grid.2x2")
+                        }
+                    }
+
+                }
             }
         }
         .sheet(isPresented: $viewModel.showModel) {
-            if let character = selectedCharacter {
+            if let character = viewModel.characterselected {
                 DetailViewHome(character: character)
             }
         }
@@ -45,4 +46,5 @@ struct HomeView: View {
 #Preview {
     HomeView(viewModel: HomeViewModel())
         .environment(AppStateVM())
+        .preferredColorScheme(.dark)
 }
