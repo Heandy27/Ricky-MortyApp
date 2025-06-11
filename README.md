@@ -17,6 +17,7 @@ The app connects to a REST API to fetch data about the characters and displays i
 - **MVVM:** The MVVM design pattern is used to organize the code, separating business logic (Model), user interface representation (View), and data handling (ViewModel).
 - **Combine:** Implementation of Combine to handle data reactivity.
 - **Async/Await:** Usage of async/await to make API requests efficiently.
+- **CoreData:** Stores character data locally to improve performance and support offline usage. It avoids unnecessary API calls by persisting fetched data on the device.
 - **RootView:** Usage of states in the app to handle errors.
 
 ## Technologies
@@ -29,6 +30,7 @@ The app connects to a REST API to fetch data about the characters and displays i
 - API REST
 - MVVM
 - Combine
+- CoreData
 - Async/Await
 
 ## Installation
