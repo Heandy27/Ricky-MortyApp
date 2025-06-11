@@ -21,7 +21,7 @@ struct ErrorView: View {
                     .foregroundStyle(.white)
                     .font(.system(size: 80))
                     .padding()
-                Text("Algo malo paso, inténtalo de nuevo.")
+                Text("Something went wrong, try it again.")
                     .foregroundStyle(.white)
                     .font(.title)
                     .padding(.horizontal, 20)
@@ -30,7 +30,7 @@ struct ErrorView: View {
                     //Action Here
                     appState.status = .loading
                 } label: {
-                    Text("Regresar")
+                    Text("Try Again")
                         .foregroundStyle(.red)
                         .font(.title2)
                 }

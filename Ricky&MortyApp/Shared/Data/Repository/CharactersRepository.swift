@@ -8,7 +8,7 @@ final class CharactersRepository: CharactersRepositoryProtocol {
         self.network = network
     }
     
-    func getCharacters() async throws -> [Results] {
+    func getCharacters() async throws -> [Characters] {
         return try await network.getCharacters()
     }
     

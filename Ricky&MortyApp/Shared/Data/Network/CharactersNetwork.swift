@@ -1,15 +1,15 @@
 import Foundation
 
 protocol CharactersNetworkProtocol {
-    func getCharacters() async throws -> [Results]
+    func getCharacters() async throws -> [Characters]
 }
 
 
 final class CharactersNetwork: CharactersNetworkProtocol {
     
-    func getCharacters() async throws -> [Results] {
+    func getCharacters() async throws -> [Characters] {
         
-        var characters: [Results] = []
+        var characters: [Characters] = []
         
         let urlString = "\(ConstantsApp.CONST_API_URL)\(EndPoints.characters.rawValue)"
         

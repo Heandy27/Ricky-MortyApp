@@ -2,10 +2,10 @@ import Foundation
 @Observable
 final class HomeViewModel {
     // Publicadas
-    var characters: [Results] = []
+    var characters: [Characters] = []
     var searchText: String = ""
     var showModel: Bool = false
-    var characterselected: Results?
+    var characterselected: Characters?
     // No publicadas
     @ObservationIgnored
     let characterUsecase: CharactersUseCaseProtocol
@@ -14,11 +14,15 @@ final class HomeViewModel {
         self.characterUsecase = characterUsecase
         
         Task {
-            try await getCharacters()
+            do {
+                try await getCharacters()
+            } catch {
+                debugPrint("Error loading characters: \(error.localizedDescription)")
+            }
         }
     }
     
-    var filteredCharacters: [Results] {
+    var filteredCharacters: [Characters] {
         if searchText.isEmpty {
             return characters
         } else {

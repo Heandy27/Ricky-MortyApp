@@ -3,7 +3,7 @@ import SwiftUI
 struct HomeView: View {
     
     @State var viewModel: HomeViewModel
-    @State var selectedCharacter: Results?
+    @State var selectedCharacter: Characters?
     @Environment(AppStateVM.self) var appState
     @AppStorage("showingGrid") private var showingGrid = false    
     init(viewModel: HomeViewModel) {

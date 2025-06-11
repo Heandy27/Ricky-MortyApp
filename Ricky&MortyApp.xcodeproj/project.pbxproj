@@ -12,6 +12,9 @@
 		BF03074E2D1B144200BBC4F6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03074D2D1B144200BBC4F6 /* RootView.swift */; };
 		BF0307512D1B1F4300BBC4F6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0307502D1B1F4300BBC4F6 /* LoadingView.swift */; };
 		BF0307532D1B221900BBC4F6 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0307522D1B221900BBC4F6 /* ErrorView.swift */; };
+		BF8A5BF52DF0EE8000C35D2D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF8A5BF32DF0EE8000C35D2D /* Model.xcdatamodeld */; };
+		BF8A5C1B2DF10D3600C35D2D /* StoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A5C1A2DF10D3100C35D2D /* StoreDataProvider.swift */; };
+		BF8A5C1C2DF10D3600C35D2D /* StoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A5C1A2DF10D3100C35D2D /* StoreDataProvider.swift */; };
 		BF8A96AA2D19F2540033F520 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8A969F2D19F2540033F520 /* Preview Assets.xcassets */; };
 		BF8A96AB2D19F2540033F520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8A96A22D19F2540033F520 /* Assets.xcassets */; };
 		BF8A96AC2D19F2540033F520 /* Ricky_MortyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A96A42D19F2540033F520 /* Ricky_MortyAppApp.swift */; };
@@ -34,6 +37,12 @@
 		BFAA8BC72D7F476100400B38 /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA8BC62D7F476100400B38 /* ListLayout.swift */; };
 		BFAA8BC92D7F47C200400B38 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA8BC82D7F47C200400B38 /* GridLayout.swift */; };
 		BFAA8BCB2D7F5DDC00400B38 /* SingleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA8BCA2D7F5DDC00400B38 /* SingleGridView.swift */; };
+		BFC921632DF1E1B100EE5C19 /* MOOrigin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC921612DF1E1B100EE5C19 /* MOOrigin+CoreDataClass.swift */; };
+		BFC921642DF1E1B100EE5C19 /* MOLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9215F2DF1E1B100EE5C19 /* MOLocation+CoreDataClass.swift */; };
+		BFC921682DF1E1B100EE5C19 /* MOCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9215D2DF1E1B100EE5C19 /* MOCharacter+CoreDataClass.swift */; };
+		BFC921692DF1E1B100EE5C19 /* MOCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9215D2DF1E1B100EE5C19 /* MOCharacter+CoreDataClass.swift */; };
+		BFC9216B2DF1E1B100EE5C19 /* MOLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9215F2DF1E1B100EE5C19 /* MOLocation+CoreDataClass.swift */; };
+		BFC9216D2DF1E1B100EE5C19 /* MOOrigin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC921612DF1E1B100EE5C19 /* MOOrigin+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +68,8 @@
 		BF03074D2D1B144200BBC4F6 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		BF0307502D1B1F4300BBC4F6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		BF0307522D1B221900BBC4F6 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		BF8A5BF42DF0EE8000C35D2D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BF8A5C1A2DF10D3100C35D2D /* StoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDataProvider.swift; sourceTree = "<group>"; };
 		BF8A963E2D19F1060033F520 /* Ricky&MortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ricky&MortyApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8A964E2D19F1080033F520 /* Ricky&MortyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ricky&MortyAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8A96582D19F1080033F520 /* Ricky&MortyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ricky&MortyAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +95,9 @@
 		BFAA8BC62D7F476100400B38 /* ListLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLayout.swift; sourceTree = "<group>"; };
 		BFAA8BC82D7F47C200400B38 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		BFAA8BCA2D7F5DDC00400B38 /* SingleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGridView.swift; sourceTree = "<group>"; };
+		BFC9215D2DF1E1B100EE5C19 /* MOCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MOCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFC9215F2DF1E1B100EE5C19 /* MOLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MOLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFC921612DF1E1B100EE5C19 /* MOOrigin+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MOOrigin+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -133,6 +147,18 @@
 				BFAA8BC82D7F47C200400B38 /* GridLayout.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		BF8A5BF22DF0E07A00C35D2D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BF8A5C1A2DF10D3100C35D2D /* StoreDataProvider.swift */,
+				BF8A5BF32DF0EE8000C35D2D /* Model.xcdatamodeld */,
+				BFC9215D2DF1E1B100EE5C19 /* MOCharacter+CoreDataClass.swift */,
+				BFC9215F2DF1E1B100EE5C19 /* MOLocation+CoreDataClass.swift */,
+				BFC921612DF1E1B100EE5C19 /* MOOrigin+CoreDataClass.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		BF8A96352D19F1060033F520 = {
@@ -199,6 +225,7 @@
 		BF8A96AF2D19F25F0033F520 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BF8A5BF22DF0E07A00C35D2D /* CoreData */,
 				BF8A96B52D19F2A80033F520 /* Network */,
 				BF8A96B42D19F2A20033F520 /* Repository */,
 			);
@@ -467,8 +494,13 @@
 				BF8A96D02D19FCC80033F520 /* CharactersUseCaseProtocol.swift in Sources */,
 				BF8A96BB2D19F3AF0033F520 /* HomeView.swift in Sources */,
 				BF8A96D92D19FF3B0033F520 /* SingleViewHome.swift in Sources */,
+				BF8A5C1B2DF10D3600C35D2D /* StoreDataProvider.swift in Sources */,
 				BF8A96D22D19FD040033F520 /* CharactersUseCase.swift in Sources */,
+				BF8A5BF52DF0EE8000C35D2D /* Model.xcdatamodeld in Sources */,
 				BF8A96AC2D19F2540033F520 /* Ricky_MortyAppApp.swift in Sources */,
+				BFC921692DF1E1B100EE5C19 /* MOCharacter+CoreDataClass.swift in Sources */,
+				BFC9216B2DF1E1B100EE5C19 /* MOLocation+CoreDataClass.swift in Sources */,
+				BFC9216D2DF1E1B100EE5C19 /* MOOrigin+CoreDataClass.swift in Sources */,
 				BF8A96CB2D19FB970033F520 /* CharactersRepository.swift in Sources */,
 				BFAA8BC72D7F476100400B38 /* ListLayout.swift in Sources */,
 				BF8A96C32D19F3FA0033F520 /* EndPoints.swift in Sources */,
@@ -489,6 +521,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC921632DF1E1B100EE5C19 /* MOOrigin+CoreDataClass.swift in Sources */,
+				BFC921642DF1E1B100EE5C19 /* MOLocation+CoreDataClass.swift in Sources */,
+				BFC921682DF1E1B100EE5C19 /* MOCharacter+CoreDataClass.swift in Sources */,
+				BF8A5C1C2DF10D3600C35D2D /* StoreDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +840,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF8A5BF32DF0EE8000C35D2D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF8A5BF42DF0EE8000C35D2D /* Model.xcdatamodel */,
+			);
+			currentVersion = BF8A5BF42DF0EE8000C35D2D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF8A96362D19F1060033F520 /* Project object */;
 }

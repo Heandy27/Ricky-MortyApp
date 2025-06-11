@@ -2,7 +2,7 @@ import SwiftUI
 
 struct DetailViewHome: View {
     
-    var character: Results
+    var character: Characters
     
     var body: some View {
         VStack {
@@ -62,5 +62,5 @@ struct DetailViewHome: View {
 }
 
 #Preview {
-    DetailViewHome(character: Results(id: 1, name: "Rick Sanchez", status: "Alive", species: "Human", type: "", gender: "Male", origin: Origin(name: "Earth (C-137)", url: "https://rickandmortyapi.com/api/location/3"), location: Location(name: "Citadel of Ricks", url: ""), image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg", episode: ["https://rickandmortyapi.com/api/episode/1", "https://rickandmortyapi.com/api/episode/2"]))
+    DetailViewHome(character: Characters.sampler)
 }
