@@ -1,5 +1,10 @@
 import CoreData
 
+enum TypePersistency {
+    case disk // Guarda los datos en el disco (persisten aunque cierres la app)
+    case inMemory // Guarda los datos en memoria (se borran cuando cierras la app)
+}
+
 /// Clase que gestiona el acceso y almacenamiento de datos usando Core Data
 class StoreDataProvider {
     
@@ -7,6 +12,7 @@ class StoreDataProvider {
     
     /// Contenedor persistente de Core Data, donde se gestiona el modelo de datos
     private let persistentContainer: NSPersistentContainer
+    private let persistency: TypePersistency
     /// Contexto que se utiliza para realizar operaciones (crear, leer, actualizar, borrar) sobre las entidades
     private var context: NSManagedObjectContext {
         let viewContext = persistentContainer.viewContext
@@ -15,17 +21,24 @@ class StoreDataProvider {
     }
     
     /// Inicializa el contenedor persistente con el nombre del modelo y carga los stores
-    init() {
+    init(persistency: TypePersistency = .disk) {
         // 🚨 Evita inicializar el store real cuando estás en Previews de SwiftUI
-        #if DEBUG
-        if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
-            // En Preview → no inicialices nada de Core Data
-            self.persistentContainer = NSPersistentContainer(name: "Model")
-            return
-        }
-        #endif
+//        #if DEBUG
+//        if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
+//            // En Preview → no inicialices nada de Core Data
+//            self.persistency = persistency
+//            self.persistentContainer = NSPersistentContainer(name: "Model")
+//            return
+//        }
+//        #endif
+        self.persistency = persistency
         // Inicializa el contenedor con el nombre del modelo .xcdatamodeld
         self.persistentContainer = NSPersistentContainer(name: "Model")
+        // Si es tipo memoria, se evita guardar en disco
+        if self.persistency == .inMemory {
+            let persistentStore = persistentContainer.persistentStoreDescriptions.first
+            persistentStore?.url = URL(filePath: "/dev/null") // memoria solamente
+        }
         // Carga los stores (archivos SQLite o en memoria)
         self.persistentContainer.loadPersistentStores { _, error in
             if let error {
@@ -61,7 +74,7 @@ extension StoreDataProvider {
     /// Guarda una lista de personajes (`Results`) obtenidos de la API en Core Data
     /// - Parameter characters: Array de personajes desde la API
     
-    func addCharacters(characters: [Characters]) {
+    public func addCharacters(characters: [Characters]) {
         // Itera por cada personaje recibido
         for character in characters {
 //            // Busca si ya existe un personaje con este id
@@ -88,7 +101,7 @@ extension StoreDataProvider {
     }
     
     
-    private func createOrigin(from originData: Origin, for character: MOCharacter) -> MOOrigin {
+    public func createOrigin(from originData: Origin, for character: MOCharacter) -> MOOrigin {
         let origin = MOOrigin(context: context)
         origin.name = originData.name
         origin.url = originData.url
@@ -98,7 +111,7 @@ extension StoreDataProvider {
         return origin
     }
     
-    private func createLocation(from locationData: Location, for character: MOCharacter) -> MOLocation {
+    public func createLocation(from locationData: Location, for character: MOCharacter) -> MOLocation {
         let location = MOLocation(context: context)
         location.name = locationData.name
         location.url = locationData.url
@@ -106,7 +119,7 @@ extension StoreDataProvider {
         return location
     }
     
-    func fetchCharactersWithNonNilId() -> [MOCharacter] {
+    public func fetchCharactersWithNonNilId() -> [MOCharacter] {
         let request = MOCharacter.fetchRequest()
         // Aplica el filtro si se proporcionó
         // Filtra solo los que tienen id diferente de nil (opcional, por seguridad)

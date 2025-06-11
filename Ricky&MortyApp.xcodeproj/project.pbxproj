@@ -34,6 +34,7 @@
 		BF8A96D42D19FD620033F520 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A96D32D19FD5D0033F520 /* HomeViewModel.swift */; };
 		BF8A96D92D19FF3B0033F520 /* SingleViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A96D82D19FF3B0033F520 /* SingleViewHome.swift */; };
 		BF8A97552D1A079A0033F520 /* DetailViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A97542D1A079A0033F520 /* DetailViewHome.swift */; };
+		BF9686682DFA2B7C00D6069E /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A96C82D19F59D0033F520 /* CharactersModel.swift */; };
 		BFAA8BC72D7F476100400B38 /* ListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA8BC62D7F476100400B38 /* ListLayout.swift */; };
 		BFAA8BC92D7F47C200400B38 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA8BC82D7F47C200400B38 /* GridLayout.swift */; };
 		BFAA8BCB2D7F5DDC00400B38 /* SingleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA8BCA2D7F5DDC00400B38 /* SingleGridView.swift */; };
@@ -417,7 +418,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					BF8A963D2D19F1060033F520 = {
 						CreatedOnToolsVersion = 16.1;
@@ -523,6 +524,7 @@
 			files = (
 				BFC921632DF1E1B100EE5C19 /* MOOrigin+CoreDataClass.swift in Sources */,
 				BFC921642DF1E1B100EE5C19 /* MOLocation+CoreDataClass.swift in Sources */,
+				BF9686682DFA2B7C00D6069E /* CharactersModel.swift in Sources */,
 				BFC921682DF1E1B100EE5C19 /* MOCharacter+CoreDataClass.swift in Sources */,
 				BF8A5C1C2DF10D3600C35D2D /* StoreDataProvider.swift in Sources */,
 			);
@@ -586,6 +588,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P5P768BLW3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -649,6 +652,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P5P768BLW3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -678,7 +682,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Ricky&MortyApp/Preview Content\"";
-				DEVELOPMENT_TEAM = P5P768BLW3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -707,7 +710,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Ricky&MortyApp/Preview Content\"";
-				DEVELOPMENT_TEAM = P5P768BLW3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -734,7 +736,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P5P768BLW3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
@@ -753,7 +754,6 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P5P768BLW3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
@@ -771,7 +771,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P5P768BLW3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyheredia.Ricky-MortyAppUITests";
@@ -788,7 +787,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P5P768BLW3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andyheredia.Ricky-MortyAppUITests";
